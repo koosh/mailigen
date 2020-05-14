@@ -1,0 +1,15 @@
+{
+  "name": "koosh/mailigen",
+  "description": "Wrapper for Mailigen API",
+  "minimum-stability": "dev",
+  "license": "MIT",
+  "require": {
+    "php": ">=7.0 <=7.4"
+  },
+  "autoload": {
+    "psr-4": {
+      "Mailigen\\": "src/"
+    },
+    "classmap": ["mailigen/inc"]
+  }
+}
