@@ -11,7 +11,7 @@ Instead of ```new \MGAPI( ... )``` call ```new \Mailigen\ApiClient( ... )```
 $api = new \Mailigen\ApiClient('your-api-key');
 try {
     $api->someMethod($args);
-} catch (\Mailigen\MailigenExcpeption $e) {
+} catch (\Mailigen\MailigenException $e) {
     var_dump($e);
 }
 ```

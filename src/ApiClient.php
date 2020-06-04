@@ -26,7 +26,7 @@ class ApiClient
     {
         $result = call_user_func_array([$this->mgapi, $name], $arguments);
         if ($this->mgapi->errorCode) {
-            throw new MailigenExcpeption($this->mgapi->errorMessage, $this->mgapi->errorCode);
+            throw new MailigenException($this->mgapi->errorMessage, $this->mgapi->errorCode);
         }
 
         return $result;
