@@ -1,6 +1,6 @@
 {
   "name": "koosh/mailigen",
-  "description": "Wrapper for Mailigen API",
+  "description": "Wrapper for Mailigen SDK",
   "minimum-stability": "dev",
   "license": "MIT",
   "require": {

@@ -2,6 +2,14 @@
 
 namespace Mailigen;
 
+/**
+ * @method listSubscribe($listId, string $email, array $array, string $string, bool $false, bool $false1, bool $true)
+ * @method listUnsubscribe($listId, string $email, bool $true, bool $false, bool $false1)
+ * @method campaignCreate(string $string, array $options, array $content)
+ * @method campaignSendNow($newCampaign)
+ *
+ * There's more just @see \MGAPI, PR's to complete this list are very welcome.
+ */
 class ApiClient
 {
     /**
