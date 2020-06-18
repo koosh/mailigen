@@ -24,7 +24,12 @@ class ApiClient
 
     public function __call($name, $arguments)
     {
-        $result = call_user_func_array([$this->mgapi, $name], $arguments);
+        try {
+            $result = call_user_func_array([$this->mgapi, $name], $arguments);
+        } catch (\Error $e) {
+            throw new MailigenException($e->getMessage(), $e->getCode(), $e);
+        }
+
         if ($this->mgapi->errorCode) {
             throw new MailigenException($this->mgapi->errorMessage, $this->mgapi->errorCode);
         }
