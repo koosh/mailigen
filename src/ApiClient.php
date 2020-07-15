@@ -7,6 +7,8 @@ namespace Mailigen;
  * @method listUnsubscribe($listId, string $email, bool $true, bool $false, bool $false1)
  * @method campaignCreate(string $string, array $options, array $content)
  * @method campaignSendNow($newCampaign)
+ * @method listMemberInfo(string $id, string $email_address)
+ * @method listUpdateMember(string $id, string $email_address, array $merge_vars)
  *
  * There's more just @see \MGAPI, PR's to complete this list are very welcome.
  */
