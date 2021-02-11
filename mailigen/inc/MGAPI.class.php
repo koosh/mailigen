@@ -1808,7 +1808,11 @@ class MGAPI {
 
 		if(ini_get("magic_quotes_runtime")) $response = stripslashes($response);
 
-		$serial = unserialize($response);
+		try {
+			$serial = unserialize($response);
+		} catch (\Error $e) {
+			throw new \Exception('MAILIGEN UNSERIALIZE ERROR from response: ' . $response, 0, $e);
+		}
 		if($response && $serial === false) {
 			$response = array("error" => "Bad Response.  Got This: " . $response, "code" => "-99");
 		} else {
